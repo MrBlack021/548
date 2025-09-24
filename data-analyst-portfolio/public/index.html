@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhanunjaya Reddy Badduri Portfolio</title>
+  <meta name="description" content="Portfolio of Dhanunjaya Reddy Badduri — Data Analyst & Talent Acquisition Specialist. Interactive charts, projects, and experience.">
+  <link rel="icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .card-hover { transition: transform .18s ease, box-shadow .18s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 30px rgba(13, 23, 40, 0.08); }
+    .progress-inner { width: 0%; transition: width 900ms cubic-bezier(.2,.8,.2,1); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <header class="bg-gradient-to-r from-white to-blue-50 shadow-md p-8 rounded-b-lg max-w-5xl mx-auto mt-6 card-hover" role="banner">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-3xl font-bold">Dhanunjaya Reddy Badduri</h1>
+        <p class="text-lg text-gray-600 mt-2">Data Analyst | Talent Acquisition Specialist</p>
+        <p class="text-sm text-gray-500 mt-1">Turning data into insights, and insights into strategy.</p>
+        <div class="mt-4 flex justify-center md:justify-start gap-4">
+          <a href="resume.pdf" download class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition transform hover:-translate-y-0.5">Download Resume</a>
+          <a href="https://wa.me/917997622601?text=Hello%20Dhanunjaya,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." target="_blank" class="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-100 transition">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="relative z-10 flex-shrink-0">
+        <div class="mx-auto md:mx-0">
+          <div class="w-36 h-36 md:w-32 md:h-32 rounded-full overflow-hidden shadow-lg bg-white ring-4 ring-white transform md:-translate-y-6" style="border: 4px solid rgba(255,255,255,0.9);">
+            <a href="./img/avatar.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size avatar">
+              <picture>
+                <source srcset="./img/avatar.jpg" type="image/jpeg">
+                <img src="./img/avatar.svg" alt="Dhanunjaya Reddy Badduri" loading="lazy" class="w-full h-full object-cover object-center">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Me -->
+    <section class="max-w-4xl mx-auto p-6">
+      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+      <p>
+        Motivated professional with expertise in <b>data analytics</b> and <b>talent acquisition</b>, combining technical acumen with people-centric strategies. Experienced in corporate and agency environments, leveraging data-driven insights to align talent and business objectives.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-white py-8 my-8 rounded-xl shadow-lg max-w-4xl mx-auto card-hover" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <span><i class="fa-solid fa-chart-column text-blue-500" aria-hidden="true"></i></span>
+        <span>Skills</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6 items-start">
+        <!-- Chart column -->
+        <div class="w-full flex justify-center">
+          <canvas id="skillsChart" role="img" aria-label="Bar chart of skills and proficiency" style="max-width:500px; width:100%; background:white; margin-top:2rem;"></canvas>
+        </div>
+
+        <!-- Skills detail column -->
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-medium">SQL</span>
+              <span class="text-sm text-gray-500">78%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full progress-inner" data-width="78%"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-medium">Python (Pandas)</span>
+              <span class="text-sm text-gray-500">75%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full progress-inner" data-width="75%"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-medium">Excel</span>
+              <span class="text-sm text-gray-500">77%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full progress-inner" data-width="77%"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-medium">Tableau</span>
+              <span class="text-sm text-gray-500">80%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full progress-inner" data-width="80%"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-medium">Power BI</span>
+              <span class="text-sm text-gray-500">75%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full progress-inner" data-width="75%"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-medium">Data Visualization</span>
+              <span class="text-sm text-gray-500">77%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full progress-inner" data-width="77%"></div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="max-w-4xl mx-auto p-6 bg-white my-8 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 flex items-center gap-2">
+        <span><i class="fa-solid fa-chart-pie text-blue-500"></i></span> Projects
+      </h2>
+      <div class="mb-4">
+        <h3 class="font-semibold">Student Analytics Dashboard – KL University</h3>
+        <p class="text-sm text-gray-600">6th Semester / 2022</p>
+        <ul class="list-disc list-inside text-sm my-2">
+          <li>Built a dashboard using Excel and Tableau</li>
+          <li>Analyzed student performance data and trends</li>
+          <li>Presented insights with clear data storytelling</li>
+        </ul>
+      </div>
+      <div class="w-full flex justify-center">
+        <canvas id="projectsChart" style="max-width:400px; width:100%; background:white; margin-top:2rem;"></canvas>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="max-w-4xl mx-auto p-6 bg-white my-8 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <span><i class="fa-solid fa-user-tie text-blue-500"></i></span> Experience
+      </h2>
+      <div class="mb-4">
+        <h3 class="font-semibold">Recruitment Specialist</h3>
+        <p class="text-sm text-gray-600">Bension Technology — Bangalore, India (07/2022 – 07/2023)</p>
+        <ul class="list-disc list-inside text-sm my-2">
+          <li>Managed full-cycle recruitment for technical and non-technical roles</li>
+          <li>Collaborated with hiring managers to align role requirements</li>
+          <li>Improved time-to-hire by 20% through optimized screening</li>
+          <li>Conducted data-driven analytics on recruitment KPIs</li>
+        </ul>
+      </div>
+      <div class="w-full flex justify-center">
+        <canvas id="experienceChart" style="max-width:400px; width:100%; background:white; margin-top:2rem;"></canvas>
+      </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section class="max-w-4xl mx-auto p-6">
+      <h2 class="text-2xl font-semibold mb-4">Education Timeline</h2>
+      <div class="relative border-l-2 border-blue-500 ml-4">
+        <div class="mb-6 ml-6 flex items-start">
+          <span class="flex-shrink-0 mt-1 mr-3 bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-white">🎓</span>
+          <div>
+            <p class="font-semibold">B.Tech - KL University</p>
+            <p class="text-xs text-gray-400">2019 – 2023</p>
+          </div>
+        </div>
+        <div class="mb-6 ml-6 flex items-start">
+          <span class="flex-shrink-0 mt-1 mr-3 bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-white">🎓</span>
+          <div>
+            <p class="font-semibold">M.Sc in Analytics and Systems - Bridgeport University</p>
+            <p class="text-xs text-gray-400">Aug 2023 – May 2025, GPA: 3.71/4</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-8 mt-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-xl font-semibold mb-2">Contact</h2>
+      <p class="text-sm">📍 Jersey City, NJ, USA</p>
+      <p class="text-sm">📧 Dhanunjayareddybadduri@gmail.com</p>
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chart.js Visualizations -->
+  <script>
+    // register datalabels plugin
+    Chart.register(ChartDataLabels);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // animate progress bars
+      document.querySelectorAll('.progress-inner').forEach(el => {
+        const target = el.getAttribute('data-width') || '0%';
+        requestAnimationFrame(() => { el.style.width = target; });
+      });
+
+      // Skills Bar Chart
+      const skillsCtx = document.getElementById('skillsChart').getContext('2d');
+      new Chart(skillsCtx, {
+        type: 'bar',
+        data: {
+          labels: ['SQL', 'Python', 'Excel', 'Tableau', 'Power BI'],
+          datasets: [{
+            label: 'Skill Level',
+            data: [78, 75, 77, 80, 75],
+            backgroundColor: [
+              'rgba(37, 99, 235, 0.9)',
+              'rgba(59, 130, 246, 0.9)',
+              'rgba(96, 165, 250, 0.9)',
+              'rgba(99, 102, 241, 0.9)',
+              'rgba(56, 189, 248, 0.9)'
+            ],
+            borderRadius: 6,
+            barPercentage: 0.7
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            datalabels: { anchor: 'end', align: 'end', color: '#0b2b5a', font: { weight: 700 }, formatter: v => v + '%' }
+          },
+          scales: { y: { beginAtZero: true, max: 100, ticks: { stepSize: 20 } } }
+        }
+      });
+
+      // Projects Pie Chart
+      const projCtx = document.getElementById('projectsChart').getContext('2d');
+      new Chart(projCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Data Cleaning', 'Visualization', 'Storytelling'],
+          datasets: [{
+            data: [30, 40, 30],
+            backgroundColor: [
+              'rgba(37, 99, 235, 0.9)',
+              'rgba(59, 130, 246, 0.9)',
+              'rgba(96, 165, 250, 0.9)'
+            ]
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { position: 'bottom' }, datalabels: { color: '#fff', formatter: v => v + '%' } }
+        }
+      });
+
+      // Experience Radar Chart
+      const expCtx = document.getElementById('experienceChart').getContext('2d');
+      new Chart(expCtx, {
+        type: 'radar',
+        data: {
+          labels: ['Sourcing', 'Screening', 'Collaboration', 'Analytics'],
+          datasets: [{
+            label: 'Experience',
+            data: [80, 75, 78, 72],
+            backgroundColor: 'rgba(59, 130, 246, 0.25)',
+            borderColor: 'rgba(37, 99, 235, 1)',
+            pointBackgroundColor: 'rgba(37, 99, 235, 1)'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false }, datalabels: { display: false } },
+          scales: { r: { min: 0, max: 100, ticks: { stepSize: 20 } } }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
